@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/itAnalytic">
+
+    <fragment
+        android:id="@+id/itOrders"
+        android:name="com.example.admin_deskita.OrderFragment"
+        android:label="@string/order_fragment_label"
+        tools:layout="@layout/fragment_order"/>
+
+
+    <fragment
+        android:id="@+id/itProducts"
+        android:name="com.example.admin_deskita.ProductFragment"
+        android:label="@string/product_fragment_label"
+        tools:layout="@layout/fragment_product"/>
+    <fragment
+        android:id="@+id/itAnalytic"
+        android:name="com.example.admin_deskita.AnalyticFragment"
+        android:label=""
+        tools:layout="@layout/fragment_analytic"></fragment>
+    <fragment
+        android:id="@+id/itDiscounts"
+        android:name="com.example.admin_deskita.DiscountFragment"
+        android:label=""
+        tools:layout="@layout/fragment_discount"></fragment>
+    <fragment
+        android:id="@+id/itProfile"
+        android:name="com.example.admin_deskita.ProfileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" />
+    <fragment
+        android:id="@+id/itCustomers"
+        android:name="com.example.admin_deskita.CustomerFragment"
+        android:label="fragment_customer"
+        tools:layout="@layout/fragment_customer" >
+        <action
+            android:id="@+id/to_customerDetailFragment"
+            app:destination="@id/customerDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/customerDetailFragment"
+        android:name="com.example.admin_deskita.CustomerDetailFragment"
+        android:label="fragment_customer_detail"
+        tools:layout="@layout/fragment_customer_detail" >
+        <action
+            android:id="@+id/action_back_customerFragment"
+            app:destination="@id/itCustomers" />
+    </fragment>
+
+</navigation>
